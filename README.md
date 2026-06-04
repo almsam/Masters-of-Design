@@ -5,3 +5,5 @@ This is a repository for my Masters of Design at UBC. In essence the program is 
 ## To do:
 
 Plot finder: https://github.com/almsam/Numerical-Analysis-code
+
+Ry: https://github.com/almsam/Ry-Stats-Lib
