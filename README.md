@@ -7,3 +7,5 @@ This is a repository for my Masters of Design at UBC. In essence the program is 
 Plot finder: https://github.com/almsam/Numerical-Analysis-code
 
 Ry: https://github.com/almsam/Ry-Stats-Lib
+
+Pride flag project: https://github.com/almsam/AI-Pride-Flag-generation
