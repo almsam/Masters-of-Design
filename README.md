@@ -8,4 +8,6 @@ Plot finder: https://github.com/almsam/Numerical-Analysis-code
 
 Ry: https://github.com/almsam/Ry-Stats-Lib
 
+Image Generator: https://github.com/almsam/Aesthetix-AI-Image-Generation
+
 Pride flag project: https://github.com/almsam/AI-Pride-Flag-generation
