@@ -9,9 +9,11 @@ This is a repository for my Masters of Design at UBC. In essence the program is 
 I have 2 projects focusing on the science side of things
 
 Plot finder: https://github.com/almsam/Numerical-Analysis-code
+ - A library for numerical analysis and regression analysis in Python the end goal being fourier regression
 
 Ry: https://github.com/almsam/Ry-Stats-Lib
  - "R but with Py"
+ - A library for statistical analysis and data science in Python, with a focus on simplicity and ease of use. The library is designed to be a lightweight alternative to R, with a similar syntax and functionality
 
 Image Generator: https://github.com/almsam/Aesthetix-AI-Image-Generation
 
