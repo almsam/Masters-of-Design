@@ -4,9 +4,14 @@ This is a repository for my Masters of Design at UBC. In essence the program is 
 
 ## To do:
 
+### Science projects:
+
+I have 2 projects focusing on the science side of things
+
 Plot finder: https://github.com/almsam/Numerical-Analysis-code
 
 Ry: https://github.com/almsam/Ry-Stats-Lib
+ - "R but with Py"
 
 Image Generator: https://github.com/almsam/Aesthetix-AI-Image-Generation
 
