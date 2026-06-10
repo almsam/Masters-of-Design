@@ -23,3 +23,5 @@ Image Generator: https://github.com/almsam/Aesthetix-AI-Image-Generation
  - This is an extention of my capstone project for my undergrad, where I built an AI image generator from scratch. The goal of this project is to create a tool that can generate aesthetically pleasing images based on user input.
 
 Pride flag project: https://github.com/almsam/AI-Pride-Flag-generation
+ - This project is 2 fold, the first is to create a neural network to perform rudamentary data analysis on pride flags, and the second is to create a tool that can generate pride flags based on user input parameters
+ - I wish to see if I can find correlations between the colours and shapes of pride flags and the communities they represent, and if I can use that information to generate new pride flags that are representative of those communities.
