@@ -6,6 +6,8 @@ This is a repository for my Masters of Design at UBC. In essence the program is 
 
 Check out my MDes Branding and Identity project
 
+![image info](<\MDes brand identity\MDes square.JPG>)
+
 ## To do:
 
 ### Science projects:
