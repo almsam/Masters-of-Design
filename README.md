@@ -2,6 +2,10 @@
 
 This is a repository for my Masters of Design at UBC. In essence the program is a collaboration between UBC's Creative and Critical studies and Applied Science departments. The program is designed to allow students to explore the intersection of design and technology, with a personal focus on data science and how I can use my computer and software skills to create cool things that people can use.
 
+## Work so far:
+
+Check out my MDes Branding and Identity project
+
 ## To do:
 
 ### Science projects:
