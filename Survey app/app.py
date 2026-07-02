@@ -17,16 +17,32 @@ def index():
 
     if request.method == "POST":
 
-        score = float(request.form["score"])
+        math = float(request.form["math"])
+        science = float(request.form["science"])
+        english = float(request.form["english"])
+        history = float(request.form["history"])
+        art = float(request.form["art"])
 
         df = pd.DataFrame({
-            "Category": ["Your Score"],
-            "Value": [score]
+            "Category": [
+                "Math",
+                "Science",
+                "English",
+                "History",
+                "Art"
+            ],
+            "Value": [
+                math,
+                science,
+                english,
+                history,
+                art
+            ]
         })
 
         sns.set_theme(style="whitegrid")
 
-        plt.figure(figsize=(6,4))
+        plt.figure(figsize=(8,5))
 
         ax = sns.barplot(
             data=df,
@@ -35,7 +51,8 @@ def index():
         )
 
         ax.set_ylim(0,100)
-        ax.set_title("Personalized Score")
+        ax.set_ylabel("Score")
+        ax.set_title("Personalized Scores")
 
         plt.tight_layout()
         plt.savefig("static/graph.png")
