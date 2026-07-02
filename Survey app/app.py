@@ -77,29 +77,46 @@ def index():
         Q3x = ((q3xa - q3xb)*2.5)
         Q3y = ((q3ya - q3yb)*2.5)
 
-        sns.set_theme(style="whitegrid")
+        sns.set_theme(style="dark")
 
         ############# barchart
 
+        colors = ["magenta", "yellow", "coral", "yellowgreen", "turquoise"]
         plt.figure(figsize=(8,5))
-        ax = sns.barplot(data=df, x="Category", y="Value")
-        ax.set_ylim(0,5); ax.set_ylabel("Score"); ax.set_title("Personalized Scores")
+        plt.xlabel(""); plt.ylabel("")
+        ax = sns.barplot(data=df, x="Category", y="Value", palette=colors)
+        ax.set_ylim(0,5)#; ax.set_ylabel("Score")
+        ax.set_yticks([]); ax.set_xlabel(""); ax.set_ylabel("")
+        
+        bold_labels = {"Fine Arts", "Humanities", "Physical Sciences", "Life Sciences", "Mathematics"}
+        for label in ax.get_xticklabels():
+            if label.get_text() in bold_labels: label.set_fontweight("bold")
+
+        
         plt.tight_layout(); plt.savefig("static/graph.png"); plt.close()
         
         
         ############# graph 2
 
         plt.figure(figsize=(6, 6))
+        ax = plt.gca()
 
-        plt.scatter(Q2x, Q2y, s=150)
+        plt.scatter(Q2x, Q2y, s=150, color="tomato")
 
         plt.xlim(-10, 10); plt.ylim(-10, 10)
         plt.axhline(0, color="black", linewidth=1)
         plt.axvline(0, color="black", linewidth=1)
-        plt.xlabel("Small Builds <-> Big Builds")
-        plt.ylabel("Structured ^ \nFreeform v")
-        plt.title("Execution Style")
-        plt.grid(True)
+        
+        ax.set_xticks([]); ax.set_yticks([])
+        
+        ax.text(0, 11, "Structured Thoughts", ha="center", va="center", fontsize=18, fontweight="bold")
+        ax.text(0, -11, "Freeform Thoughts", ha="center", va="center", fontsize=18, fontweight="bold")
+        ax.text(11, 0, "Few Big Steps", ha="center", va="center", fontsize=18, fontweight="bold", rotation=90)
+        ax.text(-11, 0, "Many Small Steps", ha="center", va="center", fontsize=18, fontweight="bold", rotation=90)
+        # plt.xlabel("Small Builds <-> Big Builds")
+        # plt.ylabel("Structured ^ \nFreeform v")
+        # plt.title("Execution Style")
+        # plt.grid(True)
         plt.tight_layout()
         plt.savefig("static/graph1.png")
         plt.close()
@@ -107,17 +124,25 @@ def index():
         ############# graph 3
 
 
-        plt.figure(figsize=(6, 6))
+        plt.figure(figsize=(6, 6)); ax = plt.gca()
 
-        plt.scatter(Q3x, Q3y, s=150, color="orange")
+
+        plt.scatter(Q3x, Q3y, s=150, color="lime")
 
         plt.xlim(-10, 10); plt.ylim(-10, 10)
         plt.axhline(0, color="black", linewidth=1)
         plt.axvline(0, color="black", linewidth=1)
-        plt.xlabel("Systems <-> Details")
-        plt.ylabel("Human Feedback ^\nPressure Testing v")
-        plt.title("Thinking Style")
-        plt.grid(True)
+        
+        ax.set_xticks([]); ax.set_yticks([])
+        
+        ax.text(0, 11, "Human Feedback", ha="center", va="center", fontsize=18, fontweight="bold")
+        ax.text(0, -11, "Mechanical Testing", ha="center", va="center", fontsize=18, fontweight="bold")
+        ax.text(11, 0, "Systems Thinking", ha="center", va="center", fontsize=18, fontweight="bold", rotation=90)
+        ax.text(-11, 0, "Detailed Thinking", ha="center", va="center", fontsize=18, fontweight="bold", rotation=90)
+        # plt.xlabel("Human Feedback^\nSystems <---> Details\nMechanical Testing v")
+        # plt.ylabel("")#Human Feedback ^\nPressure Testing v")
+        # plt.title("Thinking Style")
+        # plt.grid(True)
         plt.tight_layout()
         plt.savefig("static/graph2.png")
         plt.close()

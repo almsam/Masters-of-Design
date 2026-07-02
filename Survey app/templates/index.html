@@ -145,16 +145,16 @@
 
 {% if graph_exists %}
 
-<h2>Your Graph</h2>
+<h1>Your Personalized Graphs:</h1>
 
 <img src="{{ url_for('static', filename='graph.png') }}">
 
 {% if graph_exists %}
 
-<h2>Execution Style</h2>
+<h2>Execution Style:</h2>
 <img src="{{ url_for('static', filename='graph1.png') }}">
 
-<h2>Thinking Style</h2>
+<h2>Thinking Style:</h2>
 <img src="{{ url_for('static', filename='graph2.png') }}">
 
 {% endif %}
