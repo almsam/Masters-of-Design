@@ -1,0 +1,29 @@
+Q1:
+
+1a. Fine art skills - scale 1 to 5
+1b. Humanities skills - scale 1 to 5
+1c. Physical Science skills - scale 1 to 5
+1d. Life science skills - scale 1 to 5
+1e. Math skills - scale 1 to 5
+
+# create a spider plot
+
+Q2:
+
+2x1. "I like making it exist first and making it good later"
+2x2. "I like building more quality into fewer prototypes"
+
+2y1. "I benefit from strictly structured and technical prototypes"
+2y2. "I benefit from abstract and creatively expressed drafts"
+
+# 2d plot where X is quality/quantity and Y is abstract/specific
+
+Q3:
+
+3x1. "I am good at thinking in systems and structures to solve problems"
+3x2. "I am good at building powerful focused solutions to specific problems"
+
+3y1. "I enjoy getting human feedback and experiences of my work"
+3y2. "I enjoy pressure testing my ideas to find flaws"
+
+# 2d plot where X is specialist/generalist and Y is human/mechanical
