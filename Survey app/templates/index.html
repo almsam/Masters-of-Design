@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Survey Graph</title>
+
+</head>
+
+<body>
+
+<h1>Enter Your Score</h1>
+
+<form method="POST">
+
+    <input
+        type="number"
+        name="score"
+        min="0"
+        max="100"
+        required
+    >
+
+    <button type="submit">
+        Generate Graph
+    </button>
+
+</form>
+
+{% if graph_exists %}
+
+<h2>Your Graph</h2>
+
+<img src="{{ url_for('static', filename='graph.png') }}">
+
+{% endif %}
+
+</body>
+
+</html>
