@@ -10,20 +10,20 @@ Q1:
 
 Q2:
 
-2x1. "I like making it exist first and making it good later"
-2x2. "I like building more quality into fewer prototypes"
+2x1. "I like making it exist first and making it good later" 2xa
+2x2. "I like building fewer prototypes of higher quality" 2xb
 
-2y1. "I benefit from strictly structured and technical prototypes"
-2y2. "I benefit from abstract and creatively expressed drafts"
+2y1. "I benefit from strictly structured and technical prototypes" 2ya
+2y2. "I benefit from abstract and creatively expressed drafts" 2yb
 
 # 2d plot where X is quality/quantity and Y is abstract/specific
 
 Q3:
 
-3x1. "I am good at thinking in systems and structures to solve problems"
-3x2. "I am good at building powerful focused solutions to specific problems"
+3x1. "I am good at thinking in systems and structures to solve problems" 3xa
+3x2. "I am good at building powerful focused solutions to specific problems" 3xb
 
-3y1. "I enjoy getting human feedback and experiences of my work"
-3y2. "I enjoy pressure testing my ideas to find flaws"
+3y1. "I enjoy getting human feedback and experiences of my work" 3ya
+3y2. "I enjoy pressure testing my ideas to find flaws" 3yb
 
 # 2d plot where X is specialist/generalist and Y is human/mechanical

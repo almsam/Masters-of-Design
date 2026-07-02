@@ -10,13 +10,13 @@
 
 <body>
 
-<h1>Enter Your Score</h1>
+<h1>MDes student survey</h1>
 
 <form method="POST">
 
 <form method="POST">
 
-    <label>Rate your skills on each of the fields:</label>
+    <h2>Rate your skills on each of the fields:</h2>
 
     <p><strong>Fine Arts</strong></p>
     <label><input type="radio" name="fine" value="1" required> 1</label>
@@ -63,11 +63,81 @@
 
     <br><br>
 
-    <label>To what extent do you agree with the following statements?:</label>
+    <h2>To what extent do you agree with the following statements?:</h2>
 
     <br><br>
 
+    <p><strong>"I like making it exist first and making it good later"</strong></p>
+    <label><input type="radio" name="Axa" value="1" required> 1</label>
+    <label><input type="radio" name="Axa" value="2"> 2</label>
+    <label><input type="radio" name="Axa" value="3"> 3</label>
+    <label><input type="radio" name="Axa" value="4"> 4</label>
+    <label><input type="radio" name="Axa" value="5"> 5</label>
 
+    <br><br>
+
+    <p><strong>"I like building fewer prototypes of higher quality"</strong></p>
+    <label><input type="radio" name="Axb" value="1" required> 1</label>
+    <label><input type="radio" name="Axb" value="2"> 2</label>
+    <label><input type="radio" name="Axb" value="3"> 3</label>
+    <label><input type="radio" name="Axb" value="4"> 4</label>
+    <label><input type="radio" name="Axb" value="5"> 5</label>
+
+    <br><br>
+
+    <p><strong>"I benefit from strictly structured and technical prototypes"</strong></p>
+    <label><input type="radio" name="Aya" value="1" required> 1</label>
+    <label><input type="radio" name="Aya" value="2"> 2</label>
+    <label><input type="radio" name="Aya" value="3"> 3</label>
+    <label><input type="radio" name="Aya" value="4"> 4</label>
+    <label><input type="radio" name="Aya" value="5"> 5</label>
+
+    <br><br>
+
+    <p><strong>"I benefit from abstract and creatively expressed drafts"</strong></p>
+    <label><input type="radio" name="Ayb" value="1" required> 1</label>
+    <label><input type="radio" name="Ayb" value="2"> 2</label>
+    <label><input type="radio" name="Ayb" value="3"> 3</label>
+    <label><input type="radio" name="Ayb" value="4"> 4</label>
+    <label><input type="radio" name="Ayb" value="5"> 5</label>
+
+    <br><br>
+
+    <p><strong>"I am good at thinking in systems and structures to solve problems"</strong></p>
+    <label><input type="radio" name="Bxa" value="1" required> 1</label>
+    <label><input type="radio" name="Bxa" value="2"> 2</label>
+    <label><input type="radio" name="Bxa" value="3"> 3</label>
+    <label><input type="radio" name="Bxa" value="4"> 4</label>
+    <label><input type="radio" name="Bxa" value="5"> 5</label>
+
+    <br><br>
+
+    <p><strong>"I am good at building powerful focused solutions to specific problems"</strong></p>
+    <label><input type="radio" name="Bxb" value="1" required> 1</label>
+    <label><input type="radio" name="Bxb" value="2"> 2</label>
+    <label><input type="radio" name="Bxb" value="3"> 3</label>
+    <label><input type="radio" name="Bxb" value="4"> 4</label>
+    <label><input type="radio" name="Bxb" value="5"> 5</label>
+
+    <br><br>
+
+    <p><strong>"I enjoy getting human feedback and experiences of my work"</strong></p>
+    <label><input type="radio" name="Bya" value="1" required> 1</label>
+    <label><input type="radio" name="Bya" value="2"> 2</label>
+    <label><input type="radio" name="Bya" value="3"> 3</label>
+    <label><input type="radio" name="Bya" value="4"> 4</label>
+    <label><input type="radio" name="Bya" value="5"> 5</label>
+
+    <br><br>
+
+    <p><strong>"I enjoy pressure testing my ideas to find flaws"</strong></p>
+    <label><input type="radio" name="Byb" value="1" required> 1</label>
+    <label><input type="radio" name="Byb" value="2"> 2</label>
+    <label><input type="radio" name="Byb" value="3"> 3</label>
+    <label><input type="radio" name="Byb" value="4"> 4</label>
+    <label><input type="radio" name="Byb" value="5"> 5</label>
+
+    <br><br>
 
     <button type="submit">Generate Graph</button>
 
@@ -78,6 +148,16 @@
 <h2>Your Graph</h2>
 
 <img src="{{ url_for('static', filename='graph.png') }}">
+
+{% if graph_exists %}
+
+<h2>Execution Style</h2>
+<img src="{{ url_for('static', filename='graph1.png') }}">
+
+<h2>Thinking Style</h2>
+<img src="{{ url_for('static', filename='graph2.png') }}">
+
+{% endif %}
 
 {% endif %}
 
