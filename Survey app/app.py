@@ -17,26 +17,26 @@ def index():
 
     if request.method == "POST":
 
+        fine = float(request.form["fine"])
+        human = float(request.form["human"])
+        phys = float(request.form["phys"])
+        life = float(request.form["life"])
         math = float(request.form["math"])
-        science = float(request.form["science"])
-        english = float(request.form["english"])
-        history = float(request.form["history"])
-        art = float(request.form["art"])
 
         df = pd.DataFrame({
             "Category": [
-                "Math",
-                "Science",
-                "English",
-                "History",
-                "Art"
+                "Fine Arts",
+                "Humanities",
+                "Physical Sciences",
+                "Life Sciences",
+                "Mathematics"
             ],
             "Value": [
-                math,
-                science,
-                english,
-                history,
-                art
+                fine,
+                human,
+                phys,
+                life,
+                math
             ]
         })
 
@@ -50,7 +50,7 @@ def index():
             y="Value"
         )
 
-        ax.set_ylim(0,100)
+        ax.set_ylim(0,5)
         ax.set_ylabel("Score")
         ax.set_title("Personalized Scores")
 
