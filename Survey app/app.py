@@ -6,6 +6,7 @@ matplotlib.use("Agg") # supress matplotlib from trying to open a GUI
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
+import numpy as np
 
 app = Flask(__name__)
 
@@ -82,7 +83,7 @@ def index():
         ############# barchart
 
         colors = ["magenta", "yellow", "coral", "yellowgreen", "turquoise"]
-        plt.figure(figsize=(8,5))
+        plt.figure(figsize=(8,4.5))
         plt.xlabel(""); plt.ylabel("")
         ax = sns.barplot(data=df, x="Category", y="Value", palette=colors)
         ax.set_ylim(0,5)#; ax.set_ylabel("Score")
@@ -90,7 +91,7 @@ def index():
         
         bold_labels = {"Fine Arts", "Humanities", "Physical Sciences", "Life Sciences", "Mathematics"}
         for label in ax.get_xticklabels():
-            if label.get_text() in bold_labels: label.set_fontweight("bold")
+            if label.get_text() in bold_labels: label.set_fontweight("bold"); label.set_fontsize(15); label.set_rotation(30)
 
         
         plt.tight_layout(); plt.savefig("static/graph.png"); plt.close()
@@ -98,7 +99,7 @@ def index():
         
         ############# graph 2
 
-        plt.figure(figsize=(6, 6))
+        plt.figure(figsize=(6.5, 6))
         ax = plt.gca()
 
         plt.scatter(Q2x, Q2y, s=150, color="tomato")
@@ -124,7 +125,7 @@ def index():
         ############# graph 3
 
 
-        plt.figure(figsize=(6, 6)); ax = plt.gca()
+        plt.figure(figsize=(6.5, 6)); ax = plt.gca()
 
 
         plt.scatter(Q3x, Q3y, s=150, color="lime")
@@ -146,6 +147,45 @@ def index():
         plt.tight_layout()
         plt.savefig("static/graph2.png")
         plt.close()
+
+        ############# graph 4
+
+
+        
+        labels = ["Fine\nArts", "\n\nHumanities", "Life\nSciences", "Physical\nSciences", "Mathematics"]
+        values = [fine, human, life, phys, math]; N = len(labels)
+
+        # find our angles for each axis
+        angles = np.linspace(0, 2 * np.pi, N, endpoint=False).tolist()
+        values += values[:1]; angles += angles[:1]
+
+        fig = plt.figure(figsize=(5, 5))
+        ax = plt.subplot(111, polar=True)
+        
+                # rainbow colors?
+        # colors = ["purple", "gold", "green", "blue", "white"]#plt.cm.hsv(np.linspace(0, 1, N))
+        colors = ["cyan", "lime", "yellow", "coral", "violet"]#plt.cm.hsv(np.linspace(0, 1, N))
+
+        # draw colored segments
+        for i in range(N):
+            ax.fill(
+                [angles[i], angles[i+1], angles[i+1], angles[i]],
+                [0, 0, values[i+1], values[i]],
+                color=colors[i],
+                alpha=0.5
+            )
+        
+        ax.plot(angles, values, linewidth=2, color="black")
+        ax.fill(angles, values, alpha=0.35)#, color="dodgerblue")
+
+        ax.tick_params(axis='x', pad=25)
+        ax.set_xticks(angles[:-1])
+        ax.set_xticklabels(labels, fontsize=18, fontweight="bold")
+        ax.set_yticklabels([])
+        ax.set_ylim(0, 5)
+
+        plt.tight_layout(); plt.savefig("static/graph3.png"); plt.close()
+
 
 
         graph_exists = True

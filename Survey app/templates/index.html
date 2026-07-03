@@ -147,14 +147,21 @@
 
 <h1>Your Personalized Graphs:</h1>
 
+<h2>Skills Radar:</h2>
+
 <img src="{{ url_for('static', filename='graph.png') }}">
 
 {% if graph_exists %}
 
-<h2>Execution Style:</h2>
+<img src="{{ url_for('static', filename='graph3.png') }}">
+
+{% endif %}
+
+{% if graph_exists %}
+
+<h2>Execution And Thinking Styles:</h2>
 <img src="{{ url_for('static', filename='graph1.png') }}">
 
-<h2>Thinking Style:</h2>
 <img src="{{ url_for('static', filename='graph2.png') }}">
 
 {% endif %}
