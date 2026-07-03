@@ -1,6 +1,5 @@
 numpy
 pandas
 matplotlib
-matplotlib.pyplot
 seaborn
 flask
