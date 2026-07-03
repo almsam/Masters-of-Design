@@ -73,6 +73,10 @@ def index():
             ]
         })
 
+        # df = pd.DataFrame({ "Category": [ "Fine Arts", "Humanities", "Physical Sciences", "Life Sciences", "Mathematics"], "Value": [0, 0, 0, 0, 0] })
+        # q2xa, q2xb, q2ya, q2yb, q3xa, q3xb, q3ya, q3yb = 0, 0, 0, 0, 0, 0, 0, 0
+        # math, phys, life, human, fine = 0, 0, 0, 0, 0
+
         Q2x = ((q2xa - q2xb)*2.5)
         Q2y = ((q2ya - q2yb)*2.5)
         Q3x = ((q3xa - q3xb)*2.5)
