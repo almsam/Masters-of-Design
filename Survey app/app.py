@@ -83,7 +83,7 @@ def index():
         ############# barchart
 
         colors = ["magenta", "yellow", "coral", "yellowgreen", "turquoise"]
-        plt.figure(figsize=(8,4.5))
+        plt.figure(figsize=(4.5,4.5))
         plt.xlabel(""); plt.ylabel("")
         ax = sns.barplot(data=df, x="Category", y="Value", palette=colors)
         ax.set_ylim(0,5)#; ax.set_ylabel("Score")

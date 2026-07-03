@@ -1,173 +1,248 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>MDes Survey</title>
 
-    <title>Survey Graph</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+            color: #111;
+        }
 
+        header {
+            background: #111;
+            color: white;
+            padding: 18px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            border-top: 1px solid #eee;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .question {
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f3f3f3;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        button {
+            background: black;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        img {
+            max-width: 100%;
+            margin: 15px 0;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>MDes student survey</h1>
+<header>
+    MDes Student Survey Dashboard
+</header>
 
-<form method="POST">
+<div class="container">
 
-<form method="POST">
+    <form method="POST">
 
-    <h2>Rate your skills on each of the fields:</h2>
+        <!-- Q1 -->
+        <div class="card">
+            <h2>Rate your skills on each of the fields:</h2>
 
-    <p><strong>Fine Arts</strong></p>
-    <label><input type="radio" name="fine" value="1" required> 1</label>
-    <label><input type="radio" name="fine" value="2"> 2</label>
-    <label><input type="radio" name="fine" value="3"> 3</label>
-    <label><input type="radio" name="fine" value="4"> 4</label>
-    <label><input type="radio" name="fine" value="5"> 5</label>
+            <div class="question">
+                <div class="section-title">Fine Arts</div>
+                {% for i in range(1,6) %}
+                <label><input type="radio" name="fine" value="{{i}}" required> {{i}}</label>
+                {% endfor %}
+            </div>
 
-    <br><br>
+            <div class="question">
+                <div class="section-title">Humanities</div>
+                {% for i in range(1,6) %}
+                <label><input type="radio" name="human" value="{{i}}" required> {{i}}</label>
+                {% endfor %}
+            </div>
 
-    <p><strong>Humanities</strong></p>
-    <label><input type="radio" name="human" value="1" required> 1</label>
-    <label><input type="radio" name="human" value="2"> 2</label>
-    <label><input type="radio" name="human" value="3"> 3</label>
-    <label><input type="radio" name="human" value="4"> 4</label>
-    <label><input type="radio" name="human" value="5"> 5</label>
+            <div class="question">
+                <div class="section-title">Physical Science</div>
+                {% for i in range(1,6) %}
+                <label><input type="radio" name="phys" value="{{i}}" required> {{i}}</label>
+                {% endfor %}
+            </div>
 
-    <br><br>
+            <div class="question">
+                <div class="section-title">Life Science</div>
+                {% for i in range(1,6) %}
+                <label><input type="radio" name="life" value="{{i}}" required> {{i}}</label>
+                {% endfor %}
+            </div>
 
-    <p><strong>Physical Sciences</strong></p>
-    <label><input type="radio" name="phys" value="1" required> 1</label>
-    <label><input type="radio" name="phys" value="2"> 2</label>
-    <label><input type="radio" name="phys" value="3"> 3</label>
-    <label><input type="radio" name="phys" value="4"> 4</label>
-    <label><input type="radio" name="phys" value="5"> 5</label>
+            <div class="question">
+                <div class="section-title">Mathematical Sciences</div>
+                {% for i in range(1,6) %}
+                <label><input type="radio" name="math" value="{{i}}" required> {{i}}</label>
+                {% endfor %}
+            </div>
+        </div>
 
-    <br><br>
 
-    <p><strong>Life Sciences</strong></p>
-    <label><input type="radio" name="life" value="1" required> 1</label>
-    <label><input type="radio" name="life" value="2"> 2</label>
-    <label><input type="radio" name="life" value="3"> 3</label>
-    <label><input type="radio" name="life" value="4"> 4</label>
-    <label><input type="radio" name="life" value="5"> 5</label>
+        <!-- Q2 -->
+        <div class="card">
+            <h2>To what extent do you agree with the following statements?:</h2>
 
-    <br><br>
+            <div class="question">
+                <div class="section-title">"I like making it exist first and making it good later"</div>
+                {% for i in range(1,6) %}
+                <label><input type="radio" name="Axa" value="{{i}}" required> {{i}}</label>
+                {% endfor %}
+            </div>
 
-    <p><strong>Mathematical Sciences</strong></p>
-    <label><input type="radio" name="math" value="1" required> 1</label>
-    <label><input type="radio" name="math" value="2"> 2</label>
-    <label><input type="radio" name="math" value="3"> 3</label>
-    <label><input type="radio" name="math" value="4"> 4</label>
-    <label><input type="radio" name="math" value="5"> 5</label>
+            <div class="question">
+                <div class="section-title">"I like building fewer prototypes of higher quality"</div>
+                {% for i in range(1,6) %}
+                <label><input type="radio" name="Axb" value="{{i}}" required> {{i}}</label>
+                {% endfor %}
+            </div>
 
-    <br><br>
+            <div class="question">
+                <div class="section-title">"I benefit from strictly structured and technical prototypes"</div>
+                {% for i in range(1,6) %}
+                <label><input type="radio" name="Aya" value="{{i}}" required> {{i}}</label>
+                {% endfor %}
+            </div>
 
-    <h2>To what extent do you agree with the following statements?:</h2>
+            <div class="question">
+                <div class="section-title">"I benefit from abstract and creatively expressed drafts"</div>
+                {% for i in range(1,6) %}
+                <label><input type="radio" name="Ayb" value="{{i}}" required> {{i}}</label>
+                {% endfor %}
+            </div>
 
-    <br><br>
 
-    <p><strong>"I like making it exist first and making it good later"</strong></p>
-    <label><input type="radio" name="Axa" value="1" required> 1</label>
-    <label><input type="radio" name="Axa" value="2"> 2</label>
-    <label><input type="radio" name="Axa" value="3"> 3</label>
-    <label><input type="radio" name="Axa" value="4"> 4</label>
-    <label><input type="radio" name="Axa" value="5"> 5</label>
+            <div class="question">
+                <div class="section-title">"I am good at thinking in systems and structures to solve problems"</div>
+                {% for i in range(1,6) %}
+                <label><input type="radio" name="Bxa" value="{{i}}" required> {{i}}</label>
+                {% endfor %}
+            </div>
 
-    <br><br>
+            <div class="question">
+                <div class="section-title">"I am good at building powerful focused solutions to specific problems"</div>
+                {% for i in range(1,6) %}
+                <label><input type="radio" name="Bxb" value="{{i}}" required> {{i}}</label>
+                {% endfor %}
+            </div>
 
-    <p><strong>"I like building fewer prototypes of higher quality"</strong></p>
-    <label><input type="radio" name="Axb" value="1" required> 1</label>
-    <label><input type="radio" name="Axb" value="2"> 2</label>
-    <label><input type="radio" name="Axb" value="3"> 3</label>
-    <label><input type="radio" name="Axb" value="4"> 4</label>
-    <label><input type="radio" name="Axb" value="5"> 5</label>
+            <div class="question">
+                <div class="section-title">"I enjoy getting human feedback and experiences of my work"</div>
+                {% for i in range(1,6) %}
+                <label><input type="radio" name="Bya" value="{{i}}" required> {{i}}</label>
+                {% endfor %}
+            </div>
 
-    <br><br>
+            <div class="question">
+                <div class="section-title">"I enjoy pressure testing my ideas to find flaws"</div>
+                {% for i in range(1,6) %}
+                <label><input type="radio" name="Byb" value="{{i}}" required> {{i}}</label>
+                {% endfor %}
+            </div>
+        </div>
 
-    <p><strong>"I benefit from strictly structured and technical prototypes"</strong></p>
-    <label><input type="radio" name="Aya" value="1" required> 1</label>
-    <label><input type="radio" name="Aya" value="2"> 2</label>
-    <label><input type="radio" name="Aya" value="3"> 3</label>
-    <label><input type="radio" name="Aya" value="4"> 4</label>
-    <label><input type="radio" name="Aya" value="5"> 5</label>
+        <button type="submit">Generate Personalized Graphs</button>
 
-    <br><br>
+    </form>
 
-    <p><strong>"I benefit from abstract and creatively expressed drafts"</strong></p>
-    <label><input type="radio" name="Ayb" value="1" required> 1</label>
-    <label><input type="radio" name="Ayb" value="2"> 2</label>
-    <label><input type="radio" name="Ayb" value="3"> 3</label>
-    <label><input type="radio" name="Ayb" value="4"> 4</label>
-    <label><input type="radio" name="Ayb" value="5"> 5</label>
+    <p> </p>
 
-    <br><br>
+    {% if graph_exists %}
 
-    <p><strong>"I am good at thinking in systems and structures to solve problems"</strong></p>
-    <label><input type="radio" name="Bxa" value="1" required> 1</label>
-    <label><input type="radio" name="Bxa" value="2"> 2</label>
-    <label><input type="radio" name="Bxa" value="3"> 3</label>
-    <label><input type="radio" name="Bxa" value="4"> 4</label>
-    <label><input type="radio" name="Bxa" value="5"> 5</label>
+<div class="card">
+    <h1>Here are your personalized graphs:</h1>
 
-    <br><br>
+    <div class="graph-grid">
 
-    <p><strong>"I am good at building powerful focused solutions to specific problems"</strong></p>
-    <label><input type="radio" name="Bxb" value="1" required> 1</label>
-    <label><input type="radio" name="Bxb" value="2"> 2</label>
-    <label><input type="radio" name="Bxb" value="3"> 3</label>
-    <label><input type="radio" name="Bxb" value="4"> 4</label>
-    <label><input type="radio" name="Bxb" value="5"> 5</label>
+        <div class="graph-item">
+            <div class="graph-title"><b>Skills chart:</b></div>
+            <img src="{{ url_for('static', filename='graph.png') }}">
+        </div>
 
-    <br><br>
+        <div class="graph-item">
+            <div class="graph-title"><b>Radar graph:</b></div>
+            <img src="{{ url_for('static', filename='graph3.png') }}">
+        </div>
 
-    <p><strong>"I enjoy getting human feedback and experiences of my work"</strong></p>
-    <label><input type="radio" name="Bya" value="1" required> 1</label>
-    <label><input type="radio" name="Bya" value="2"> 2</label>
-    <label><input type="radio" name="Bya" value="3"> 3</label>
-    <label><input type="radio" name="Bya" value="4"> 4</label>
-    <label><input type="radio" name="Bya" value="5"> 5</label>
+        <div class="graph-item">
+            <div class="graph-title"><b>Execution Style:</b></div>
+            <img src="{{ url_for('static', filename='graph1.png') }}">
+        </div>
 
-    <br><br>
+        <div class="graph-item">
+            <div class="graph-title"><b>Thinking Style:</b></div>
+            <img src="{{ url_for('static', filename='graph2.png') }}">
+        </div>
 
-    <p><strong>"I enjoy pressure testing my ideas to find flaws"</strong></p>
-    <label><input type="radio" name="Byb" value="1" required> 1</label>
-    <label><input type="radio" name="Byb" value="2"> 2</label>
-    <label><input type="radio" name="Byb" value="3"> 3</label>
-    <label><input type="radio" name="Byb" value="4"> 4</label>
-    <label><input type="radio" name="Byb" value="5"> 5</label>
+    </div>
+</div>
 
-    <br><br>
+    {% endif %}
 
-    <button type="submit">Generate Graph</button>
+</div>
 
-</form>
-
-{% if graph_exists %}
-
-<h1>Your Personalized Graphs:</h1>
-
-<h2>Skills Radar:</h2>
-
-<img src="{{ url_for('static', filename='graph.png') }}">
-
-{% if graph_exists %}
-
-<img src="{{ url_for('static', filename='graph3.png') }}">
-
-{% endif %}
-
-{% if graph_exists %}
-
-<h2>Execution And Thinking Styles:</h2>
-<img src="{{ url_for('static', filename='graph1.png') }}">
-
-<img src="{{ url_for('static', filename='graph2.png') }}">
-
-{% endif %}
-
-{% endif %}
+<footer>
+    MDes Survey System - Skills Visualization Dashboard - Copyright Samira Almuallim 2026 - MIT with attribution
+</footer>
 
 </body>
-
 </html>

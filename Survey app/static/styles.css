@@ -1,0 +1,119 @@
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #111;
+}
+
+/* head n foot */
+
+header {
+    background: #111;
+    color: white;
+    padding: 18px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    border-top: 1px solid #eee;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 
+    Questions
+ */
+
+.question {
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+label {
+    margin-right: 10px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    background: black;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+img {
+    max-width: 100%;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/*
+    2x2
+*/
+
+.graph-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.graph-grid img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.graph-grid img:hover {
+    transform: scale(1.02);
+}
+
+
+@media (max-width: 700px) {
+    .graph-grid {
+        grid-template-columns: 1fr;
+    }
+}
