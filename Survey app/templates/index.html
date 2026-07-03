@@ -100,7 +100,7 @@
 
         <!-- Q1 -->
         <div class="card">
-            <h1>Rate your skills on each of the fields</h1><br> </br>
+            <h1>Rate your skills on each of the fields</h1>
 
             <div class="question">
                 <div class="section-title"><p></p>Fine Arts</div>
@@ -151,7 +151,7 @@
 
         <!-- Q2 -->
         <div class="card">
-            <h1>To what extent do you agree with the following?</h1> <br> </br>
+            <h1>To what degree do you agree with the following statements?</h1>
 
             <div class="question">
                 <div class="section-title"><p></p>"I like making it exist first and making it good later"</div>
@@ -236,7 +236,6 @@
     {% if graph_exists %}
 
 <div class="card">
-    <br> </br>
     <h1>Here are your personalized graphs:</h1>
 
     <div class="graph-grid">
@@ -270,6 +269,9 @@
 
 <footer>
     MDes Survey System - Skills Visualization Dashboard - Copyright Samira Almuallim 2026 - MIT with attribution
+    <div>
+    <img src="{{ url_for('static', filename='logo.png') }}" style="width:50px;height:50px;">
+    </div>
 </footer>
 
 </body>
