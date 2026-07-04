@@ -10,6 +10,9 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_DIR = os.path.join(BASE_DIR, "static")
+
 app = Flask(__name__)
 
 
@@ -100,7 +103,7 @@ def index():
             if label.get_text() in bold_labels: label.set_fontweight("bold"); label.set_fontsize(15); label.set_rotation(30)
 
         
-        plt.tight_layout(); plt.savefig("static/graph.png"); plt.close()
+        plt.tight_layout(); plt.savefig(os.path.join(STATIC_DIR, "graph.png")); plt.close()
         
         
         ############# graph 2
@@ -125,7 +128,7 @@ def index():
         # plt.title("Execution Style")
         # plt.grid(True)
         plt.tight_layout()
-        plt.savefig("static/graph1.png")
+        plt.savefig(os.path.join(STATIC_DIR, "graph1.png"))
         plt.close()
 
         ############# graph 3
@@ -151,7 +154,7 @@ def index():
         # plt.title("Thinking Style")
         # plt.grid(True)
         plt.tight_layout()
-        plt.savefig("static/graph2.png")
+        plt.savefig(os.path.join(STATIC_DIR, "graph2.png"))
         plt.close()
 
         ############# graph 4
@@ -190,7 +193,7 @@ def index():
         ax.set_yticklabels([])
         ax.set_ylim(0, 5)
 
-        plt.tight_layout(); plt.savefig("static/graph3.png"); plt.close()
+        plt.tight_layout(); plt.savefig(os.path.join(STATIC_DIR, "graph3.png")); plt.close()
 
 
 
