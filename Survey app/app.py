@@ -203,58 +203,61 @@ def index():
         out.to_csv( "Survey app/responses.csv", mode="a", header=not os.path.exists("Survey app/responses.csv"), index=True)
 
         # read from file
-        cohort = pd.read_csv("Survey app/responses.csv", index_col=0)
+        try:
+            cohort = pd.read_csv("Survey app/responses.csv", index_col=0)
 
-        ############# cohort graph 1
-        colors = ["magenta", "yellow", "coral", "yellowgreen", "turquoise"]
-        plot_df = cohort[["Fine Arts","Humanities","Physical Sciences","Life Sciences","Mathematics"] ].melt(var_name="Category", value_name="Value")
-        plt.figure(figsize=(4.5,4.5))
-        ax = sns.boxplot(data=plot_df, x="Category", y="Value", palette=colors, width=0.5, showfliers=False)
-        sns.stripplot(data=plot_df, x="Category", y="Value", palette=colors, jitter=0.1, size=6, alpha=0.65 )
-        ax.set_ylim(0,5); ax.set_xlabel(""); ax.set_ylabel(""); ax.set_yticks([])
-        for label in ax.get_xticklabels():
-            label.set_rotation(30); label.set_fontsize(15); label.set_fontweight("bold")
-        plt.tight_layout(); plt.savefig(os.path.join(STATIC_DIR, "cohort_graph.png")); plt.close()
+            ############# cohort graph 1
+            colors = ["magenta", "yellow", "coral", "yellowgreen", "turquoise"]
+            plot_df = cohort[["Fine Arts","Humanities","Physical Sciences","Life Sciences","Mathematics"] ].melt(var_name="Category", value_name="Value")
+            plt.figure(figsize=(4.5,4.5))
+            ax = sns.boxplot(data=plot_df, x="Category", y="Value", palette=colors, width=0.5, showfliers=False)
+            sns.stripplot(data=plot_df, x="Category", y="Value", palette=colors, jitter=0.1, size=6, alpha=0.65 )
+            ax.set_ylim(0,5); ax.set_xlabel(""); ax.set_ylabel(""); ax.set_yticks([])
+            for label in ax.get_xticklabels():
+                label.set_rotation(30); label.set_fontsize(15); label.set_fontweight("bold")
+            plt.tight_layout(); plt.savefig(os.path.join(STATIC_DIR, "cohort_graph.png")); plt.close()
 
-        ############# cohort graph 2
-        plt.figure(figsize=(6.5,6)); ax = plt.gca()
-        plt.scatter(cohort["Q2x"], cohort["Q2y"], s=70, color="tomato", alpha=0.5 )
-        plt.xlim(-11,11); plt.ylim(-11,11); plt.axhline(0,color="black"); plt.axvline(0,color="black")
-        ax.set_xticks([]); ax.set_yticks([])
+            ############# cohort graph 2
+            plt.figure(figsize=(6.5,6)); ax = plt.gca()
+            plt.scatter(cohort["Q2x"], cohort["Q2y"], s=70, color="tomato", alpha=0.5 )
+            plt.xlim(-11,11); plt.ylim(-11,11); plt.axhline(0,color="black"); plt.axvline(0,color="black")
+            ax.set_xticks([]); ax.set_yticks([])
 
-        ax.text(0,11,"Structured Thoughts", ha="center", va="center", fontsize=18, fontweight="bold")
-        ax.text(0,-11,"Freeform Thoughts", ha="center", va="center", fontsize=18, fontweight="bold")
-        ax.text(11,0,"Few Big Steps", rotation=90, ha="center", va="center", fontsize=18, fontweight="bold")
-        ax.text(-11,0,"Many Small Steps", rotation=90, ha="center", va="center", fontsize=18, fontweight="bold")
-        plt.tight_layout(); plt.savefig(os.path.join(STATIC_DIR,"cohort_graph1.png")); plt.close()
+            ax.text(0,11,"Structured Thoughts", ha="center", va="center", fontsize=18, fontweight="bold")
+            ax.text(0,-11,"Freeform Thoughts", ha="center", va="center", fontsize=18, fontweight="bold")
+            ax.text(11,0,"Few Big Steps", rotation=90, ha="center", va="center", fontsize=18, fontweight="bold")
+            ax.text(-11,0,"Many Small Steps", rotation=90, ha="center", va="center", fontsize=18, fontweight="bold")
+            plt.tight_layout(); plt.savefig(os.path.join(STATIC_DIR,"cohort_graph1.png")); plt.close()
 
-        ############ cohort graph 3
-        plt.figure(figsize=(6.5,6))
-        ax = plt.gca()
-        plt.scatter(cohort["Q3x"], cohort["Q3y"], s=70, color="lime", alpha=0.5 )
-        plt.xlim(-11,11); plt.ylim(-11,11); plt.axhline(0,color="black"); plt.axvline(0,color="black")
-        ax.set_xticks([]); ax.set_yticks([])
-        ax.text(0,11,"Human Feedback", ha="center", va="center", fontsize=18, fontweight="bold")
-        ax.text(0,-11,"Mechanical Testing", ha="center", va="center", fontsize=18, fontweight="bold")
-        ax.text(11,0,"Systems Thinking", rotation=90, ha="center", va="center", fontsize=18, fontweight="bold")
-        ax.text(-11,0,"Detailed Thinking", rotation=90, ha="center", va="center", fontsize=18, fontweight="bold")
-        plt.tight_layout(); plt.savefig(os.path.join(STATIC_DIR,"cohort_graph2.png")); plt.close()
+            ############ cohort graph 3
+            plt.figure(figsize=(6.5,6))
+            ax = plt.gca()
+            plt.scatter(cohort["Q3x"], cohort["Q3y"], s=70, color="lime", alpha=0.5 )
+            plt.xlim(-11,11); plt.ylim(-11,11); plt.axhline(0,color="black"); plt.axvline(0,color="black")
+            ax.set_xticks([]); ax.set_yticks([])
+            ax.text(0,11,"Human Feedback", ha="center", va="center", fontsize=18, fontweight="bold")
+            ax.text(0,-11,"Mechanical Testing", ha="center", va="center", fontsize=18, fontweight="bold")
+            ax.text(11,0,"Systems Thinking", rotation=90, ha="center", va="center", fontsize=18, fontweight="bold")
+            ax.text(-11,0,"Detailed Thinking", rotation=90, ha="center", va="center", fontsize=18, fontweight="bold")
+            plt.tight_layout(); plt.savefig(os.path.join(STATIC_DIR,"cohort_graph2.png")); plt.close()
 
-        ############ cohort graph 4
-        labels = ["Fine\nArts", "\n\nHumanities", "Life\nSciences", "Physical\nSciences", "Mathematics"]
-        angles = np.linspace(0,2*np.pi,N,endpoint=False).tolist(); angles += angles[:1]
-        fig = plt.figure(figsize=(5,5)); ax = plt.subplot(111, polar=True); ax.set_ylim(0,5)
+            ############ cohort graph 4
+            labels = ["Fine\nArts", "\n\nHumanities", "Life\nSciences", "Physical\nSciences", "Mathematics"]
+            angles = np.linspace(0,2*np.pi,N,endpoint=False).tolist(); angles += angles[:1]
+            fig = plt.figure(figsize=(5,5)); ax = plt.subplot(111, polar=True); ax.set_ylim(0,5)
 
-        for _, row in cohort.iterrows():
-            values = [row["Fine Arts"], row["Humanities"], row["Life Sciences"], row["Physical Sciences"], row["Mathematics"] ]; values += values[:1]
-            ax.plot(angles, values, color="dodgerblue", alpha=0.12, linewidth=1 ); ax.fill(angles, values, color="dodgerblue", alpha=0.015 )
-        colors = ["magenta","yellow","yellowgreen","coral","turquoise"]
-        columns = ["Fine Arts", "Humanities", "Life Sciences", "Physical Sciences", "Mathematics" ]
-        for angle, column, color in zip(angles[:-1], columns, colors):
-            ax.scatter(np.full(len(cohort), angle), cohort[column], color=color, s=18, alpha=0.75, zorder=10 )
-        ax.tick_params(axis='x', pad=25)
-        ax.set_xticks(angles[:-1]); ax.set_xticklabels(labels, fontsize=18, fontweight="bold"); ax.set_yticklabels([])
-        plt.tight_layout(); plt.savefig(os.path.join(STATIC_DIR,"cohort_graph3.png")); plt.close()
+            for _, row in cohort.iterrows():
+                values = [row["Fine Arts"], row["Humanities"], row["Life Sciences"], row["Physical Sciences"], row["Mathematics"] ]; values += values[:1]
+                ax.plot(angles, values, color="dodgerblue", alpha=0.12, linewidth=1 ); ax.fill(angles, values, color="dodgerblue", alpha=0.015 )
+            colors = ["magenta","yellow","yellowgreen","coral","turquoise"]
+            columns = ["Fine Arts", "Humanities", "Life Sciences", "Physical Sciences", "Mathematics" ]
+            for angle, column, color in zip(angles[:-1], columns, colors):
+                ax.scatter(np.full(len(cohort), angle), cohort[column], color=color, s=18, alpha=0.75, zorder=10 )
+            ax.tick_params(axis='x', pad=25)
+            ax.set_xticks(angles[:-1]); ax.set_xticklabels(labels, fontsize=18, fontweight="bold"); ax.set_yticklabels([])
+            plt.tight_layout(); plt.savefig(os.path.join(STATIC_DIR,"cohort_graph3.png")); plt.close()
+        except:
+            print("could not generate cohort graphs")
 
 
         graph_exists = True
