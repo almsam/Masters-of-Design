@@ -200,11 +200,16 @@ def index():
         # print to file
         out = pd.DataFrame([{ "Fine Arts": fine, "Humanities": human, "Physical Sciences": phys, "Life Sciences": life, "Mathematics": math,
             "Q2x": Q2x, "Q2y": Q2y, "Q3x": Q3x, "Q3y": Q3y }])
-        out.to_csv( "Survey app/responses.csv", mode="a", header=not os.path.exists("Survey app/responses.csv"), index=True)
+        out.to_csv( "Survey app/responses.csv", mode="a", header=not os.path.exists("Survey app/responses.csv"), index=False)
 
         # read from file
         try:
-            cohort = pd.read_csv("Survey app/responses.csv", index_col=0)
+            cohort = pd.read_csv("Survey app/responses.csv")#, index_col=0) #this thingy prevents cohort graphs from updating since it messes with which CSV row is index
+            cohort.columns = cohort.columns.str.strip()
+            print(cohort.head())
+            print("COLUMNS:", cohort.columns.tolist())
+            required = ["Fine Arts","Humanities","Physical Sciences","Life Sciences","Mathematics", "Q2x","Q2y","Q3x","Q3y" ]#; cohort = cohort[required]
+            cohort = cohort.reindex(columns=required)
 
             ############# cohort graph 1
             colors = ["magenta", "yellow", "coral", "yellowgreen", "turquoise"]
@@ -256,8 +261,8 @@ def index():
             ax.tick_params(axis='x', pad=25)
             ax.set_xticks(angles[:-1]); ax.set_xticklabels(labels, fontsize=18, fontweight="bold"); ax.set_yticklabels([])
             plt.tight_layout(); plt.savefig(os.path.join(STATIC_DIR,"cohort_graph3.png")); plt.close()
-        except:
-            print("could not generate cohort graphs")
+        except Exception as e:
+            print("cohort graph error:", e)
 
 
         graph_exists = True
