@@ -202,6 +202,9 @@ def index():
             "Q2x": Q2x, "Q2y": Q2y, "Q3x": Q3x, "Q3y": Q3y }])
         out.to_csv( "Survey app/responses.csv", mode="a", header=not os.path.exists("Survey app/responses.csv"), index=False)
 
+        with pd.option_context('display.max_rows', None, 'display.max_columns', None): print(out.to_string())
+
+
         # read from file
         try:
             cohort = pd.read_csv("Survey app/responses.csv")#, index_col=0) #this thingy prevents cohort graphs from updating since it messes with which CSV row is index
@@ -210,6 +213,8 @@ def index():
             print("COLUMNS:", cohort.columns.tolist())
             required = ["Fine Arts","Humanities","Physical Sciences","Life Sciences","Mathematics", "Q2x","Q2y","Q3x","Q3y" ]#; cohort = cohort[required]
             cohort = cohort.reindex(columns=required)
+
+            with pd.option_context('display.max_rows', None, 'display.max_columns', None): print(cohort.to_string())
 
             ############# cohort graph 1
             colors = ["magenta", "yellow", "coral", "yellowgreen", "turquoise"]
