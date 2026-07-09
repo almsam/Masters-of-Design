@@ -2,28 +2,28 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
-CSV_FILE = "responses.csv"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+CSV_FILE = r"c:\Users\samia\OneDrive\Desktop\Masters of Design\Survey app\responses.csv"
 OUTPUT = "cohort_summary.png"
 
 sns.set_theme(style="dark")
 
 # Load data
 
+print(BASE_DIR)
 cohort = pd.read_csv(CSV_FILE)
 
 cohort = cohort.loc[:, ~cohort.columns.str.contains("^Unnamed")]
 cohort.columns = cohort.columns.str.strip()
 
-# ----------------------------
 # Figure
-# ----------------------------
 
 fig = plt.figure(figsize=(14, 14))
 
-# ==========================================================
 # Graph 1 : Boxplot + Scatter
-# ==========================================================
 
 ax = plt.subplot(2, 2, 1)
 
