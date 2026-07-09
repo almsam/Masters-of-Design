@@ -277,6 +277,11 @@ def index():
         graph_exists=graph_exists
     )
 
+@app.route("/get_csv")
+def get_csv():
+    cohort = pd.read_csv("Survey app/responses.csv")
+    return "<pre>" + cohort.to_string() + "</pre>"    
+
 
 if __name__ == "__main__":
     # app.run(debug=True)
