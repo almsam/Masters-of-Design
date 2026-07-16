@@ -6,7 +6,9 @@ This is a repository for my Masters of Design at UBC. In essence the program is 
 
 Check out my MDes Branding and Identity project
 
-![image info](<\MDes brand identity\MDes square.JPG>)
+![image info](\MDes brand identity\MDes square.JPG)
+
+And also see my implementation of golfer social in google sheets
 
 ## To do:
 
