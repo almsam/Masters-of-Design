@@ -2,7 +2,33 @@
 
 ## How graduate courses generally work at UBCO
 
-Some courses this school 
+Some courses this school offers are dedicated graduate courses (500 & 600 level) - but most are undergraduate courses (300 & 400 level) that are open to graduate students. 
+
+In order for a graduate student to take an undergraduate course, the easiest way is to take one thats already cross listed as a graduate course.
+
+For instance, on workday you can see both 'DATA 301' and 'DATA 501' - these are the same course, but the 501 is the graduate version.
+
+If there isn't a graduate crosslist of the course, you can still take it - you will just need some paperwork though.
+
+So you have 5 options:
+
+1. Take a dedicated graduate level course approved by the MDes program (see the bottom of this page for a list of approved courses)
+2. Take a dedicated graduate level course not on the approved list (you will need to get approval from the MDes teachers and faculty)
+3. Take an undergraduate course (100 200 300 or 400 level) that is already cross listed as a graduate course (500 or 600 level) (you will need to get approval from the MDes teachers and faculty)
+4. Take an undergraduate course (100 200 300 or 400 level) that is not cross listed as a graduate course yet (you will need to get approval from the faculty level to create the cross listed version, paperwork in essence)
+5. Take a student directed seminar (you will need to propose a ciriculum (project or research) and get approval from the faculty level)
+
+## Next steps
+
+Option 1 will be the easiest, and you can just register for the course on workday
+
+Option 2 will require you to choose a 500 or 600 level course and convince a prof (likely Ken) and the faculty above if necessary to register
+
+Option 3 will be identical to option 2, as the only difference is if the course is already cross listed with undegraduates or not
+
+Option 4 will require emails to the relevant faculties and departments - and there may already be paperwork on one website or another to get it cross listed..
+
+Option 5 will require you to propose a project or research topic, and fill out this form https://engineering.ok.ubc.ca/resources/forms/directed-studies-scheduling-request-form/
 
 ## Approved Master of Design Elective Courses:
 
