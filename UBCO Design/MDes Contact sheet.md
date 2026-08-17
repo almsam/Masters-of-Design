@@ -10,6 +10,14 @@ Context for this was partially interactions ive had over the past 6 years on cam
 
 ### Political leadership:
 
+President
+
+Principal
+
+Provost
+
+AVPS
+
 ### Staff members of note:
 
 ### Institutions of note:
