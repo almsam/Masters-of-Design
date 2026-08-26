@@ -8,6 +8,8 @@ Context for this was partially interactions ive had over the past 6 years on cam
 
 ## Contact sheet:
 
+//map on lucid chart
+
 ### Political leadership:
 
 President
