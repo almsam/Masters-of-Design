@@ -39,6 +39,6 @@ Robyn? steve?
 
 ### Institutions of note:
 
-SUO
-
-CORM
+**The Students Union:**
+Independent from UBC’s Academic and Executive operations, the SUO is an independent group meant to represent students themselves. These guys are known for clubs, food services, events, and more
+- https://www.suo.ca/contact-directory/
