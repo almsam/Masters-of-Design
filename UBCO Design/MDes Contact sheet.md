@@ -42,3 +42,24 @@ Robyn? steve?
 **The Students Union:**
 Independent from UBC’s Academic and Executive operations, the SUO is an independent group meant to represent students themselves. These guys are known for clubs, food services, events, and more
 - https://www.suo.ca/contact-directory/
+
+
+**The Library:**
+Here you will find numerous departments such as the Student Learning Hub, Makerspace, and more.
+- libquestions.ok@ubc.ca
+
+**Student experience office:**
+This lot work a lot with minority groups such as with the black students program and pride programming, and also contribute to student learning via Community Service Learning and the Student Learning Hub
+- studentexperience.ok@ubc.ca
+
+**Campus planning office:**
+These folks are split into 3 offices
+ -- Campus Planning - who focus on outdoor spaces and developments
+ -- Sustainability Planning - who focus on long term planning of UBCO
+ -- & Sustainable Transportation - who work in consultation with Kelowna Transit & parking services to ensure students and staff can get to and from campus
+- transportation.ok@ubc.ca
+
+
+**Campus Operations and Risk Management:**
+This department is a peak example of an executive branch, they over see campus security who act as UBCO’s police, fire, and first aid; the Health & Safety department; Energy Services; Facilities Management; Salto & Key services; Waste management; and a bunch more
+- https://operations.ok.ubc.ca/
