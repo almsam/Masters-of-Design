@@ -35,7 +35,17 @@ The AVP Students deals in all things students. While the academic and non academ
 
 ### Staff members of note:
 
-Robyn? steve?
+**Campus security, Community Safety Manager: Robyn Boffy**
+Robyn Boffy is the community safety officer for UBC Okanagan’s campus. Robyn has lots of experience involving campus operations, and has run a number of events in the area in the interest of community safety - including regular safety fair’s and self defence classes. Robyn has also contributed to SafeDecent - an accessibility related project for campus. In addition: Robyn also comes highly recommended from me personally after a years long professional relationship 
+- robyn.boffy@ubc.ca
+
+**Campus Wellness & Education, Manager: Melissa Feddersen**
+Melissa Feddersen is the Manager for Campus Wellness and Education, a unit within Wellbeing and Accessibility Services (along with Student Counselling Services, the Student Health Clinic, Disability Resource Centre, and Spiritual & Multifaith Services). Melissa oversees the health promotion activities (food security, mental health, sexual health, harm reduction and substance use) on campus and is part of the overall leadership team for all health services. Melissa has worked at UBC a very long time and has strong institutional knowledge of all health service. Melissa also has connections to the Foundry Kelowna and many youth and mental health services in Kelowna.
+- melissa.feddersen@ubc.ca
+
+**Student Housing and Business Operations Leader (Residence): Steve Brodrick**
+Steve Brodrick is the Director, Student Housing & Community Services Okanagan. This portfolio includes Student Housing, Conferences & Accommodations, Bookstore, Child Care Services, Parking Services and Food Services on the Okanagan campus.
+- steve.brodrick@ubc.ca
 
 ### Institutions of note:
 
