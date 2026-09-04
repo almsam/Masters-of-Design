@@ -6,16 +6,9 @@ Context for this was partially interactions ive had over the past 6 years on cam
 
 ## Institution map:
 
+![image](./image/UBCOmap.drawio.png)
+
 ## Contact sheet:
-
-<div align="center">
-
-<a href="https://github.com/almsam/Masters-of-Design">
-  <img src="UBCO design/image/UBCOmap.drawio.png" alt="Logo" width="270" height="270">
-</a>
-
-
-</div>
 
 ### Political leadership:
 
