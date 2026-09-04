@@ -8,7 +8,7 @@ Context for this was partially interactions ive had over the past 6 years on cam
 
 ## Contact sheet:
 
-//map on google drive
+![MAP](/image/UBCOmap.drawio.png)
 
 ### Political leadership:
 
