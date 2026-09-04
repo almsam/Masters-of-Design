@@ -6,6 +6,8 @@ Context for this was partially interactions ive had over the past 6 years on cam
 
 ## Institution map:
 
+[**Click here for an HD version**](https://raw.githubusercontent.com/almsam/Masters-of-Design/refs/heads/main/UBCO%20Design/image/UBCOmap.drawio.png)
+
 ![image](./image/UBCOmap.drawio.png)
 
 ## Contact sheet:
