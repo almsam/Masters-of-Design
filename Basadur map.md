@@ -60,7 +60,7 @@
 * How might we make transfers easier?
 * How might we make transit fit more naturally into people's daily routines?
 
-#### Down 3 — Specific design opportunities
+#### Down 3 - Specific design opportunities
 
 * How might we provide riders with more accurate real-time information?
 * How might we help riders recover from unexpected delays?
@@ -152,3 +152,37 @@
 * How might we involve communities in deciding where transit should go?
 
 ---
+
+# Sources
+
+Here is a brief plaintext APA list of sources that support your public transit challenge map, spanning the full paper set including lower-ranked papers near the end.
+
+Basnet, A., Shrestha, S., Limbu, S. K., Shrestha, S., & Tamang, B. (2025). Measuring mobility gaps: A quantitative study of affordability, reliability and safety issues in Kathmandu's public transport system. NPRC Journal of Multidisciplinary Research.
+
+Lubitow, A., Rainer, J., & Bassett, S. (2017). Exclusion and vulnerability on public transit: Experiences of transit dependent riders in Portland, Oregon. Mobilities.
+
+Friman, M., Lättman, K., & Olsson, L. (2020). Public transport quality, safety, and perceived accessibility. Sustainability.
+
+Kar, A., Carrel, A. L., Miller, H., & Le, H. T. K. (2022). Public transit cuts during COVID-19 compound social vulnerability in 22 US cities. Transportation Research Part D: Transport and Environment.
+
+Olsson, L., & Friman, M. (2021). Accessibility barriers and perceived accessibility: Implications for public transport. Urban Science.
+
+Brown, A. E. (2018). Fair fares? How flat and variable fares affect transit equity in Los Angeles. Case Studies on Transport Policy.
+
+Lättman, K., Friman, M., & Olsson, L. (2016). Perceived accessibility of public transport as a potential indicator of social inclusion. Social Inclusion.
+
+Ermagun, A., & Tilahun, N. (2020). Equity of transit accessibility across Chicago. Transportation Research Part D: Transport and Environment.
+
+Miller, P., de Barros, A. G., Kattan, L., & Wirasinghe, S. C. (2016). Public transportation and sustainability: A review. KSCE Journal of Civil Engineering.
+
+Venter, C., Jennings, G., Hidalgo, D., & Valderrama Pineda, A. F. (2018). The equity impacts of bus rapid transit: A review of the evidence and implications for sustainable transport. International Journal of Sustainable Transportation.
+
+Taylor, B., & Morris, E. A. (2015). Public transportation objectives and rider demographics: Are transit’s priorities poor public policy? Transportation.
+
+Taylor, B., & Garrett, M. (1999). Reconsidering social equity in public transit. Berkeley Planning Journal.
+
+Palm, M., Allen, J., Liu, B., Zhang, Y., Widener, M. N., & Farber, S. (2021). Riders who avoided public transit during COVID-19. Journal of the American Planning Association.
+
+Ward, C., & Tehrani, S. O. (2026). Community-based research as innovative, ‘intelligent’ transport data. Frontiers in Sustainable Cities.
+
+Moran, M. E. (2022). Are shelters in place? Mapping the distribution of transit amenities via a bus-stop census of San Francisco. Journal of Public Transportation.
